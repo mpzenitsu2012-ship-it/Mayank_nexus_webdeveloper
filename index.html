@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Mayank Prasad — Creative Developer</title>
+<meta name="description" content="Mayank — Creative Developer. Interactive digital experiences built with code, creativity and technology." />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Grain overlay -->
+<div class="grain"></div>
+
+<!-- Custom cursor -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- Loader -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <span class="loader-mark">M</span>
+    <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+    <span class="loader-pct" id="loaderPct">00</span>
+  </div>
+</div>
+
+<!-- Progress rail -->
+<div class="scroll-rail"><div class="scroll-rail-fill" id="scrollFill"></div></div>
+
+<!-- Fixed nav -->
+<nav class="nav">
+  <a href="#hero" class="nav-mark">MK</a>
+  <div class="nav-links">
+    <a href="#about" data-nav>About</a>
+    <a href="#skills" data-nav>Skills</a>
+    <a href="#work" data-nav>Work</a>
+    <a href="#journey" data-nav>Journey</a>
+    <a href="#contact" data-nav>Contact</a>
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span></button>
+</nav>
+
+<div class="nav-mobile" id="navMobile">
+  <a href="#about" data-nav>01 — About</a>
+  <a href="#skills" data-nav>02 — Skills</a>
+  <a href="#work" data-nav>03 — Work</a>
+  <a href="#journey" data-nav>04 — Journey</a>
+  <a href="#achievements" data-nav>05 — Achievements</a>
+  <a href="#contact" data-nav>06 — Contact</a>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="hero">
+  <canvas id="webgl" class="webgl"></canvas>
+  <canvas id="particles" class="particles-canvas"></canvas>
+
+  <div class="hero-frame">
+    <span class="frame-corner tl"></span>
+    <span class="frame-corner tr"></span>
+    <span class="frame-corner bl"></span>
+    <span class="frame-corner br"></span>
+  </div>
+
+  <div class="hero-content">
+    <p class="eyebrow reveal-line"><span>Portfolio — Est. 2026</span></p>
+    <h1 class="hero-title">
+      <span class="line-mask"><span class="line-inner" data-speed="1">MAYANK</span></span>
+      <span class="line-mask"><span class="line-inner outline" data-speed="1.4">CREATIVE DEVELOPER</span></span>
+    </h1>
+    <p class="hero-sub reveal-line">
+      <span>I build interactive digital experiences with code, creativity and technology.</span>
+    </p>
+
+    <a href="#work" class="btn-magnetic" id="exploreBtn">
+      <span class="btn-magnetic-inner">
+        <span class="btn-text">Explore My Work</span>
+        <span class="btn-arrow">→</span>
+      </span>
+    </a>
+  </div>
+
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <span class="meta-label">Scroll</span>
+      <span class="meta-line"></span>
+    </div>
+    <div class="hero-meta-item right">
+      <span class="meta-label">Based in India</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="about" id="about">
+  <div class="section-head">
+    <span class="section-index">01</span>
+    <h2 class="section-title reveal-up">About</h2>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-copy">
+      <p class="about-lead reveal-up">
+        I'm Mayank prasad — a creative developer who treats the browser like a studio.
+        I move between design and engineering, shaping ideas into interfaces
+        that feel alive: precise motion, deliberate typography, and interaction
+        that rewards curiosity.
+      </p>
+      <p class="about-body reveal-up">
+        My process starts with a question — what should this feel like to use? —
+        then works backward through code. I care about the details most people
+        scroll past: the easing on a hover, the weight of a headline, the moment
+        a page reveals itself. Every project is a chance to make something that
+        couldn't have come from a template.
+      </p>
+
+      <div class="about-facts">
+        <div class="fact reveal-up">
+          <span class="fact-num">01</span>
+          <span class="fact-text">Design-minded engineer building for the web</span>
+        </div>
+        <div class="fact reveal-up">
+          <span class="fact-num">02</span>
+          <span class="fact-text">Focused on motion, interaction and detail</span>
+        </div>
+        <div class="fact reveal-up">
+          <span class="fact-num">03</span>
+          <span class="fact-text">Always learning — currently deep in 3D web</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-visual">
+      <canvas id="aboutCanvas"></canvas>
+      <div class="about-tag">
+        <span>// currently building</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section class="skills" id="skills">
+  <div class="section-head">
+    <span class="section-index">02</span>
+    <h2 class="section-title reveal-up">Skills</h2>
+    <p class="section-sub reveal-up">Tools I reach for, shaped into something dependable.</p>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-card" data-tilt>
+      <div class="skill-card-inner">
+        <span class="skill-glyph">&lt;/&gt;</span>
+        <h3>HTML</h3>
+        <p>Semantic, accessible structure as the foundation of every build.</p>
+      </div>
+    </div>
+    <div class="skill-card" data-tilt>
+      <div class="skill-card-inner">
+        <span class="skill-glyph">{ }</span>
+        <h3>CSS</h3>
+        <p>Layout systems, motion and detail that carry a design's tone.</p>
+      </div>
+    </div>
+    <div class="skill-card" data-tilt>
+      <div class="skill-card-inner">
+        <span class="skill-glyph">JS</span>
+        <h3>JavaScript</h3>
+        <p>Interaction logic, state and the glue between design and data.</p>
+      </div>
+    </div>
+    <div class="skill-card" data-tilt>
+      <div class="skill-card-inner">
+        <span class="skill-glyph">PY</span>
+        <h3>Python</h3>
+        <p>Scripting, automation and the logic behind the interface.</p>
+      </div>
+    </div>
+    <div class="skill-card" data-tilt>
+      <div class="skill-card-inner">
+        <span class="skill-glyph">⌥</span>
+        <h3>GitHub</h3>
+        <p>Version control and collaboration, kept clean and documented.</p>
+      </div>
+    </div>
+    <div class="skill-card" data-tilt>
+      <div class="skill-card-inner">
+        <span class="skill-glyph">◇</span>
+        <h3>UI / UX</h3>
+        <p>Interfaces designed around clarity, hierarchy and feel.</p>
+      </div>
+    </div>
+    <div class="skill-card" data-tilt>
+      <div class="skill-card-inner">
+        <span class="skill-glyph">⌘</span>
+        <h3>Web Development</h3>
+        <p>End-to-end builds — from concept to a shipped, working product.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section class="work" id="work">
+  <div class="section-head">
+    <span class="section-index">03</span>
+    <h2 class="section-title reveal-up">Selected Work</h2>
+    <p class="section-sub reveal-up">A few projects worth a closer look.</p>
+  </div>
+
+  <div class="work-list">
+
+    <article class="work-card" data-tilt>
+      <div class="work-media">
+        <div class="work-media-glow"></div>
+        <div class="work-media-grid"></div>
+        <span class="work-media-mark">01</span>
+      </div>
+      <div class="work-info">
+        <h3>Nebula Dashboard</h3>
+        <p>A real-time analytics dashboard with animated data visualisation and a fully custom component system.</p>
+        <div class="work-stack">
+          <span>React</span><span>Node.js</span><span>Chart.js</span>
+        </div>
+        <div class="work-actions">
+          <a href="#" class="work-btn">Live Demo →</a>
+          <a href="#" class="work-btn ghost">GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="work-card" data-tilt>
+      <div class="work-media">
+        <div class="work-media-glow"></div>
+        <div class="work-media-grid"></div>
+        <span class="work-media-mark">02</span>
+      </div>
+      <div class="work-info">
+        <h3>Monolith Store</h3>
+        <p>A minimal e-commerce front-end with 3D product previews and buttery scroll-driven transitions.</p>
+        <div class="work-stack">
+          <span>Three.js</span><span>GSAP</span><span>Stripe API</span>
+        </div>
+        <div class="work-actions">
+          <a href="#" class="work-btn">Live Demo →</a>
+          <a href="#" class="work-btn ghost">GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="work-card" data-tilt>
+      <div class="work-media">
+        <div class="work-media-glow"></div>
+        <div class="work-media-grid"></div>
+        <span class="work-media-mark">03</span>
+      </div>
+      <div class="work-info">
+        <h3>Fieldnotes</h3>
+        <p>A personal writing tool with an offline-first architecture and distraction-free, typographic editor.</p>
+        <div class="work-stack">
+          <span>Python</span><span>Flask</span><span>SQLite</span>
+        </div>
+        <div class="work-actions">
+          <a href="#" class="work-btn">Live Demo →</a>
+          <a href="#" class="work-btn ghost">GitHub</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===================== JOURNEY ===================== -->
+<section class="journey" id="journey">
+  <div class="section-head">
+    <span class="section-index">04</span>
+    <h2 class="section-title reveal-up">Journey</h2>
+    <p class="section-sub reveal-up">How this got built, one step at a time.</p>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-line"><div class="timeline-line-fill" id="timelineFill"></div></div>
+
+    <div class="timeline-item reveal-up">
+      <div class="timeline-dot"></div>
+      <span class="timeline-year">2022</span>
+      <h4>First Line of Code</h4>
+      <p>Started with HTML &amp; CSS, building static pages just to see them come alive in a browser.</p>
+    </div>
+
+    <div class="timeline-item reveal-up">
+      <div class="timeline-dot"></div>
+      <span class="timeline-year">2023</span>
+      <h4>Learning JavaScript</h4>
+      <p>Moved into logic and interactivity — DOM manipulation, then frameworks and tooling.</p>
+    </div>
+
+    <div class="timeline-item reveal-up">
+      <div class="timeline-dot"></div>
+      <span class="timeline-year">2024</span>
+      <h4>Python &amp; Backend</h4>
+      <p>Picked up Python for scripting and backend logic, and started shipping full-stack projects.</p>
+    </div>
+
+    <div class="timeline-item reveal-up">
+      <div class="timeline-dot"></div>
+      <span class="timeline-year">2025</span>
+      <h4>Design Systems &amp; UI/UX</h4>
+      <p>Started designing before building — grids, type scales, and motion as part of the craft.</p>
+    </div>
+
+    <div class="timeline-item reveal-up">
+      <div class="timeline-dot"></div>
+      <span class="timeline-year">2026</span>
+      <h4>3D on the Web</h4>
+      <p>Now exploring Three.js and WebGL, pushing interfaces into three dimensions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ACHIEVEMENTS ===================== -->
+<section class="achievements" id="achievements">
+  <div class="section-head center">
+    <span class="section-index">05</span>
+    <h2 class="section-title reveal-up">Achievements</h2>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card reveal-up">
+      <span class="stat-num" data-count="24">0</span>
+      <span class="stat-label">Projects Completed</span>
+    </div>
+    <div class="stat-card reveal-up">
+      <span class="stat-num" data-count="12">0</span>
+      <span class="stat-label">Technologies Learned</span>
+    </div>
+    <div class="stat-card reveal-up">
+      <span class="stat-num" data-count="6">0</span>
+      <span class="stat-label">Certificates</span>
+    </div>
+    <div class="stat-card reveal-up">
+      <span class="stat-num" data-count="4">0</span>
+      <span class="stat-label">Years of Learning</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="contact" id="contact">
+  <div class="section-head">
+    <span class="section-index">06</span>
+    <h2 class="section-title reveal-up">Let's Talk</h2>
+    <p class="section-sub reveal-up">Have a project in mind, or just want to say hello?</p>
+  </div>
+
+  <div class="contact-grid">
+    <form class="contact-form" id="contactForm">
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required />
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Tell me about your project..." required></textarea>
+      </div>
+      <button type="submit" class="btn-magnetic" id="sendBtn">
+        <span class="btn-magnetic-inner">
+          <span class="btn-text">Send Message</span>
+          <span class="btn-arrow">→</span>
+        </span>
+      </button>
+      <p class="form-note" id="formNote"></p>
+    </form>
+
+    <div class="contact-side">
+      <p class="contact-line">mayank@example.com</p>
+      <div class="contact-social">
+  <a href="https://github.com/USERNAME" target="_blank" rel="noopener">GitHub</a>
+
+  <a href="https://instagram.com/_.mayank.___.09" target="_blank" rel="noopener">Instagram</a>
+
+  <a href="https://wa.me/9831724576" target="_blank" rel="noopener">WhatsApp</a>
+
+  <a href="https://linkedin.com/in/USERNAME" target="_blank" rel="noopener">LinkedIn</a>
+</div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <span>© 2026 Mayank. All rights reserved.</span>
+    <span>Designed &amp; built with care.</span>
+  </footer>
+</section>
+
+<!-- Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
